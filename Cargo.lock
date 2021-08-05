@@ -80,6 +80,10 @@ name = "rectangle"
 version = "0.1.0"
 
 [[package]]
+name = "shapes"
+version = "0.1.0"
+
+[[package]]
 name = "tic-tac-toe"
 version = "0.1.0"
 dependencies = [
