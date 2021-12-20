@@ -1,5 +1,5 @@
-use crate::direction::Direction;
 use crate::coordinate::Coordinate;
+use crate::direction::Direction;
 
 pub struct Position {
     pub(crate) coordinate: Coordinate,
@@ -8,7 +8,10 @@ pub struct Position {
 
 impl Position {
     pub(crate) fn new(x: i32, y: i32, direction: Direction) -> Self {
-        Self { direction, coordinate: Coordinate::new(x, y) }
+        Self {
+            direction,
+            coordinate: Coordinate::new(x, y),
+        }
     }
 
     pub(crate) fn turn_left(&mut self) {

@@ -4,5 +4,7 @@ members = [
     "rectangle",
     "mars-rover",
     "tic-tac-toe",
-    "shapes"
+    "shapes",
+    "ip_sniffer",
+    "pipeviewer"
 ]

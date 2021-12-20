@@ -5,7 +5,7 @@ mod position;
 mod rover;
 mod rover_handler;
 
-pub use crate::rover::Rover;
+pub use crate::command::Command::{LEFT, MOVE, RIGHT};
 pub use crate::direction::Direction;
+pub use crate::rover::Rover;
 pub use crate::rover_handler::RoverHandler;
-pub use crate::command::Command::{MOVE, LEFT, RIGHT};

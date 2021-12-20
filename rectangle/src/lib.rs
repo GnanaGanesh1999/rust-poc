@@ -91,4 +91,3 @@ mod tests {
     #[test]
     fn should_return_area_of_square_with_unit_sides() {}
 }
-

@@ -7,19 +7,12 @@ pub enum Shape {
 impl Shape {
     pub fn draw(&self) -> String {
         match self {
-            Shape::Rectangle => {
-                String::from("Drawing Rectangle from shape enum...")
-            }
-            Shape::Triangle => {
-                String::from("Drawing Triangle from shape enum...")
-            }
-            Shape::Square => {
-                String::from("Drawing Square from shape enum...")
-            }
+            Shape::Rectangle => String::from("Drawing Rectangle from shape enum..."),
+            Shape::Triangle => String::from("Drawing Triangle from shape enum..."),
+            Shape::Square => String::from("Drawing Square from shape enum..."),
         }
     }
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -55,4 +48,3 @@ mod tests {
         assert_eq!(expected_result, actual_result);
     }
 }
-

@@ -8,7 +8,10 @@ pub struct RoverHandler {
 
 impl RoverHandler {
     pub fn new(command_lists: Vec<Vec<Command>>, rovers: Vec<Rover>) -> Self {
-        Self { rovers, command_lists }
+        Self {
+            rovers,
+            command_lists,
+        }
     }
 
     pub fn run(&mut self) -> String {

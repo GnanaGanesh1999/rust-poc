@@ -25,7 +25,6 @@ impl Coordinate {
     }
 }
 
-
 //
 // public class Coordinate {
 // private Integer x;

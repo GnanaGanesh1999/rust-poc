@@ -1,6 +1,6 @@
+use crate::command::Command;
 use crate::direction::Direction;
 use crate::position::Position;
-use crate::command::Command;
 
 pub struct Rover {
     position: Position,
@@ -32,7 +32,6 @@ impl ToString for Rover {
         out
     }
 }
-
 
 // public String get_position_info() {
 // return position.toString();

@@ -10,28 +10,28 @@ pub enum Direction {
 impl Direction {
     pub fn forward(&mut self, coordinate: &mut Coordinate) {
         match self {
-            Direction::North => { coordinate.up() }
-            Direction::East => { coordinate.right() }
-            Direction::West => { coordinate.left() }
-            Direction::South => { coordinate.down() }
+            Direction::North => coordinate.up(),
+            Direction::East => coordinate.right(),
+            Direction::West => coordinate.left(),
+            Direction::South => coordinate.down(),
         }
     }
 
     pub fn rotate_left(&mut self) -> Direction {
         match self {
-            Direction::North => { Direction::West }
-            Direction::East => { Direction::North }
-            Direction::West => { Direction::South }
-            Direction::South => { Direction::East }
+            Direction::North => Direction::West,
+            Direction::East => Direction::North,
+            Direction::West => Direction::South,
+            Direction::South => Direction::East,
         }
     }
 
     pub fn rotate_right(&mut self) -> Direction {
         match self {
-            Direction::North => { Direction::East }
-            Direction::East => { Direction::South }
-            Direction::West => { Direction::North }
-            Direction::South => { Direction::West }
+            Direction::North => Direction::East,
+            Direction::East => Direction::South,
+            Direction::West => Direction::North,
+            Direction::South => Direction::West,
         }
     }
 }

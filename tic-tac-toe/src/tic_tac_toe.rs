@@ -1,8 +1,8 @@
 use crate::field::Field;
 use crate::game_util;
-use std::io::{stdin, Error};
 use crate::game_util::Player;
 use rand::Rng;
+use std::io::{stdin, Error};
 
 pub struct TicTacToe {
     field: Field,
@@ -14,7 +14,11 @@ impl TicTacToe {
     pub(crate) fn new() -> Self {
         let field = Field::new();
         let current_player = game_util::Player::USER;
-        Self { field, move_number: 0, current_cell_number: 1 }
+        Self {
+            field,
+            move_number: 0,
+            current_cell_number: 1,
+        }
     }
 
     pub(crate) fn start(&mut self) {
@@ -22,7 +26,8 @@ impl TicTacToe {
         while self.move_number < 9 {
             println!("{}", game_util::USER_MOVE_MSG);
             self.user_move();
-            self.field.update_field(self.current_cell_number as usize, 'X');
+            self.field
+                .update_field(self.current_cell_number as usize, 'X');
             self.move_number += 1;
             println!("{}", self.field.to_string());
 
@@ -35,7 +40,8 @@ impl TicTacToe {
                 println!("{}", game_util::SYSTEM_MOVE_MSG);
                 self.system_move();
             }
-            self.field.update_field(self.current_cell_number as usize, 'O');
+            self.field
+                .update_field(self.current_cell_number as usize, 'O');
             self.move_number += 1;
             println!("{}", self.field.to_string());
 

@@ -14,9 +14,10 @@ impl Field {
         for j in 0..=15 {
             let mut coincidences_number = 0;
             for i in 0..9 {
-                if self.field[i] == game_util::WINING_COMBINATIONS[j][i] &&
-                    ('X' == game_util::WINING_COMBINATIONS[j][i] ||
-                        'O' == game_util::WINING_COMBINATIONS[j][i]) {
+                if self.field[i] == game_util::WINING_COMBINATIONS[j][i]
+                    && ('X' == game_util::WINING_COMBINATIONS[j][i]
+                        || 'O' == game_util::WINING_COMBINATIONS[j][i])
+                {
                     coincidences_number += 1;
                 }
                 if coincidences_number == 3 {

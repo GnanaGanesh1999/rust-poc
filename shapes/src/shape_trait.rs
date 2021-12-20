@@ -22,7 +22,6 @@ impl Shape for Triangle {
 
 pub struct Square;
 
-
 impl Shape for Square {
     fn draw(&self) -> String {
         String::from("Drawing Square from trait...")
@@ -63,4 +62,3 @@ mod tests {
         assert_eq!(expected_result, actual_result);
     }
 }
-

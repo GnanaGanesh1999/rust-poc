@@ -1,7 +1,7 @@
 use crate::tic_tac_toe::TicTacToe;
 
-mod game_util;
 mod field;
+mod game_util;
 mod tic_tac_toe;
 
 fn main() {
